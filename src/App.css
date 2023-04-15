@@ -24,8 +24,15 @@
   color: white;
 }
 
+.nav-links {
+  color: white;
+}
+
 .App-link {
-  color: #61dafb;
+
+}
+.App-link:hover{
+  color: gray;
 }
 
 @keyframes App-logo-spin {

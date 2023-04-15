@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './utils/App';
 import reportWebVitals from './reportWebVitals';
+import {StyledEngineProvider, ThemeProvider} from "@mui/material";
+import {BrowserRouter} from "react-router-dom";
+import darkTheme from "./Components/darkTheme";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={darkTheme}>
+          <BrowserRouter>
+              <App />
+          </BrowserRouter>
+      </ThemeProvider>
   </React.StrictMode>
 );
 
