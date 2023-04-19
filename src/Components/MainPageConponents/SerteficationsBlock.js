@@ -1,23 +1,8 @@
 import {Grid, Typography} from "@mui/material";
-import Carousel from "./Сarousel";
+import Carousel2 from "./Carousel2";
 
 export default function Certificates() {
 
-    const certificates = [
-        {
-            title: 'Certificate 1',
-            imageUrl: '/path/to/certificate1.jpg',
-            altText: 'Certificate 1',
-            link: 'https://example.com/certificate1',
-        },
-        {
-            title: 'Certificate 2',
-            imageUrl: '/path/to/certificate2.jpg',
-            altText: 'Certificate 2',
-            link: 'https://example.com/certificate2',
-        },
-        // ... other certificates
-    ];
 
     return (
         <div>
@@ -31,7 +16,7 @@ export default function Certificates() {
 
             <Grid container spacing={4} justifyContent="center" mb={10}>
 
-                <Carousel/>
+                <Carousel2/>
             </Grid>
         </div>
     );
