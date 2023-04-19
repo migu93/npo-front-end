@@ -9,6 +9,7 @@ import ContactsPage from "../Pages/ContactsPage";
 import LicensesPage from "../Pages/LicensesPage";
 import OurWorksPage from "../Pages/OurWorksPage";
 import ProjectsPage from "../Pages/ProjectsPage";
+import Footer from "../Components/Footer";
 
 function App () {
     return (
@@ -23,6 +24,7 @@ function App () {
                 <Route path="/our-works" element={<OurWorksPage />}></Route>
                 <Route path="/projects" element={<ProjectsPage />}></Route>
             </Routes>
+            <Footer/>
         </ThemeProvider>
     );
 }

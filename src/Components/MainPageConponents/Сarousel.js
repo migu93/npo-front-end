@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Paper, IconButton, Box } from '@mui/material';
 import { NavigateBefore, NavigateNext } from '@mui/icons-material';
+import {useState} from "react";
 
 const Carousel = ({ images, height, width, interval }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

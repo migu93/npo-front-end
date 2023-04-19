@@ -13,28 +13,39 @@ import lic1 from '../../images/licenses/лицензия 1.jpg';
 import lic2 from '../../images/licenses/лицензия 2.jpg';
 import lic3 from '../../images/licenses/лицензия 3.jpg';
 import lic4 from '../../images/licenses/лилцензия 4.jpg';
+import pdf1 from '../../documents/lic1.pdf'
+import pdf2 from '../../documents/gos-taina.pdf'
+import pdf3 from '../../documents/opred-vid-rabot.pdf'
+import pdf4 from '../../documents/thopographic_lic.pdf'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
+const openPdf = (pdfPath) => {
+    window.open(pdfPath, '_blank');
+};
 
 const images = [
     {
-        label: 'San Francisco – Oakland Bay Bridge, United States',
+        label: 'Производство маркшейдерских работ',
+        pdfPath: pdf1,
         imgPath:
             lic1,
     },
     {
-        label: 'Bird',
+        label: 'Геодезическая и картографическая деятельность',
+        pdfPath: pdf2,
         imgPath:
             lic2,
     },
     {
-        label: 'Bali, Indonesia',
+        label: 'Проведение работ с использованием сведений, составляющих государственную тайну',
+        pdfPath: pdf3,
         imgPath:
             lic3,
     },
     {
-        label: 'Goč, Serbia',
+        label: 'Допуск к работам, влияющим на безопасность объектов капитального строительства',
+        pdfPath: pdf4,
         imgPath:
             lic4,
     },
@@ -63,14 +74,17 @@ function SwipeableTextMobileStepper() {
                 square
                 elevation={0}
                 sx={{
+                    borderTopRightRadius: 7,
+                    borderTopLeftRadius: 7,
                     display: 'flex',
                     alignItems: 'center',
                     height: 50,
-                    pl: 2,
-                    bgcolor: 'background.default',
+                    px: 2,
+                    justifyContent: 'center',
+                    bgcolor: '#1e1e1e',
                 }}
             >
-                <Typography>{images[activeStep].label}</Typography>
+                <Typography textAlign={'center'} fontSize={14}>{images[activeStep].label}</Typography>
             </Paper>
             <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -84,7 +98,7 @@ function SwipeableTextMobileStepper() {
                             <Box
                                 component="img"
                                 sx={{
-                                    height: 255,
+                                    height: 500,
                                     display: 'block',
                                     maxWidth: 400,
                                     overflow: 'hidden',
@@ -92,6 +106,8 @@ function SwipeableTextMobileStepper() {
                                 }}
                                 src={step.imgPath}
                                 alt={step.label}
+                                onClick={() => openPdf(step.pdfPath)}
+                                style={{ cursor: 'pointer' }}
                             />
                         ) : null}
                     </div>
@@ -100,6 +116,11 @@ function SwipeableTextMobileStepper() {
             <MobileStepper
                 steps={maxSteps}
                 position="static"
+                sx={{
+                    bgcolor: '#1e1e1e',
+                    borderBottomRightRadius: 7,
+                    borderBottomLeftRadius: 7
+                }}
                 activeStep={activeStep}
                 nextButton={
                     <Button
@@ -107,7 +128,6 @@ function SwipeableTextMobileStepper() {
                         onClick={handleNext}
                         disabled={activeStep === maxSteps - 1}
                     >
-                        Next
                         {theme.direction === 'rtl' ? (
                             <KeyboardArrowLeft />
                         ) : (
@@ -122,7 +142,6 @@ function SwipeableTextMobileStepper() {
                         ) : (
                             <KeyboardArrowLeft />
                         )}
-                        Back
                     </Button>
                 }
             />

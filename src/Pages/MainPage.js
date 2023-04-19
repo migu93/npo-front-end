@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import MainPageExpirienceBlock from "../Components/MainPageConponents/MainPageExpirienceBlock";
 import AboutCompanyShort from "../Components/MainPageConponents/AboutCompanyShort";
 import Certificates from "../Components/MainPageConponents/SerteficationsBlock";
+import Customers from "../Components/MainPageConponents/Our-customers";
 
 function MainPage() {
     return (
@@ -23,6 +24,7 @@ function MainPage() {
             <Container>
                 <AboutCompanyShort/>
                 <Certificates/>
+                <Customers/>
             </Container>
         </>
     );

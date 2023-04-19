@@ -1,5 +1,5 @@
-import { AppBar, Avatar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
-import { Adb as AdbIcon, Menu as MenuIcon } from '@mui/icons-material';
+import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 import {useState} from "react";
 
