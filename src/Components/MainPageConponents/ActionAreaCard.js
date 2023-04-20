@@ -4,11 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {Box, CardActionArea} from '@mui/material';
+import {Link} from "react-router-dom";
 
-export default function ActionAreaCard({title, description, imageUrl, altText}) {
+const ActionAreaCard = ({title, description, imageUrl, altText, path}) => {
     return (
         <Card sx={{ maxWidth: 355 }}>
-            <CardActionArea>
+            <CardActionArea component={Link} to={path}>
                 <CardMedia
                     component="img"
                     height="160"
@@ -33,3 +34,4 @@ export default function ActionAreaCard({title, description, imageUrl, altText}) 
         </Card>
     );
 }
+export default ActionAreaCard;

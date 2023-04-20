@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
-
+import {Box, Container, Grid, SvgIcon, Typography} from '@mui/material';
+import calendarIco from '../../images/icons/calendar.svg'
+import mapIco from '../../images/icons/map-ico.svg'
+import specialistsIco from '../../images/icons/professional.svg'
+import projectsIco from '../../images/icons/project.svg'
 
 function useAnimatedNumber(initialValue, finalValue, duration) {
     const [number, setNumber] = useState(initialValue);
@@ -45,21 +48,25 @@ function AnimatedNumber({ initialValue, finalValue, duration, unit }) {
 function BlogSection() {
     const data = [
         {
+            ico: calendarIco,
             title: 'Наш опыт работы',
             value: '10',
             unit: ' Лет',
         },
         {
+            ico: mapIco,
             title: 'Городов',
             value: 15,
             unit: '',
         },
         {
+            ico: specialistsIco,
             title: 'Специалистов',
             value: 50,
             unit: '+',
         },
         {
+            ico: projectsIco,
             title: 'Проектов',
             value: 100,
             unit: '+',
@@ -73,6 +80,7 @@ function BlogSection() {
                     {data.map((item, index) => (
                         <Grid item xs={12} sm={6} md={3} key={index}>
                             <Box sx={{ textAlign: 'center' }}>
+                                <img src={item.ico} width={70} height={70} alt=""/>
                                 <AnimatedNumber
                                     initialValue={0}
                                     finalValue={item.value}
