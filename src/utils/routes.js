@@ -6,7 +6,7 @@ import LicensesPage from '../Pages/LicensesPage';
 import OurWorksPage from '../Pages/OurWorksPage';
 import ProjectsPage from '../Pages/ProjectsPage';
 import AutomaticScanningPost from '../Components/MainPageConponents/Blog_automatic_scanning/AutomaticScanningPost';
-import { Route, RouteObject } from 'react-router-dom';
+import { RouteObject } from 'react-router-dom';
 
 const routes: RouteObject[] = [
     {

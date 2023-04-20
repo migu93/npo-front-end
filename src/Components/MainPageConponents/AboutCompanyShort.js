@@ -1,16 +1,12 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/system';
 import ActionAreaCard from "./ActionAreaCard";
 import monitoring from '../../images/monitoring.png'
 import laserScan from '../../images/LaserScan.jpg'
 import basedStantion from '../../images/basedStantion.png'
 import AirPhoto from '../../images/AirPhoto.png'
-import {Link} from "@mui/material";
 const AboutCompany = () => {
 
     return (

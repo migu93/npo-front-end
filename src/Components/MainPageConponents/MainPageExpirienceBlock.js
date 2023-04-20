@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Box, Container, Grid, SvgIcon, Typography} from '@mui/material';
+import {Box, Container, Grid, Typography} from '@mui/material';
 import calendarIco from '../../images/icons/calendar.svg'
 import mapIco from '../../images/icons/map-ico.svg'
 import specialistsIco from '../../images/icons/professional.svg'
