@@ -6,6 +6,9 @@ import LicensesPage from '../Pages/LicensesPage';
 import OurWorksPage from '../Pages/OurWorksPage';
 import ProjectsPage from '../Pages/ProjectsPage';
 import AutomaticScanningPost from '../Components/MainPageConponents/Blog_automatic_scanning/AutomaticScanningPost';
+import LaserScanningPost from '../Components/MainPageConponents/Blog_automatic_scanning/LaserScanningPost';
+import AerialPhotographyPost from '../Components/MainPageConponents/Blog_automatic_scanning/AerialPhotographyPost';
+import BaseStationsPost from '../Components/MainPageConponents/Blog_automatic_scanning/BaseStationsPost';
 import { RouteObject } from 'react-router-dom';
 
 const routes: RouteObject[] = [
@@ -43,15 +46,15 @@ const routes: RouteObject[] = [
     },
     {
         path: '/blog-aerial-photography',
-        element: <AutomaticScanningPost />,
+        element: <AerialPhotographyPost />,
     },
     {
         path: '/blog-laser-scanning',
-        element: <AutomaticScanningPost />,
+        element: <LaserScanningPost />,
     },
     {
         path: '/base-stations',
-        element: <AutomaticScanningPost />,
+        element: <BaseStationsPost />,
     },
 ];
 

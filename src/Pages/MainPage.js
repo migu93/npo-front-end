@@ -14,7 +14,7 @@ function MainPage() {
                     <Typography variant="h2" gutterBottom align="center">
                         ООО "НПО "Градиент"
                     </Typography>
-                    <Typography variant="h5" align="center" color="white">
+                    <Typography variant="h5" align="center" color='black'>
                         «Научно-производственное объединение «Градиент»
                     </Typography>
                 </Container>

@@ -6,6 +6,9 @@ const darkTheme = createTheme({
         primary: {
             main: '#272727',
         },
+        gray_text: {
+            main: '#525252',
+        },
     },
     components: {
         MuiLink: {

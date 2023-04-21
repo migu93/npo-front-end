@@ -11,7 +11,7 @@ const AboutCompany = () => {
 
     return (
             <Box sx={{ py: 8 }}>
-                <Typography variant="h3" align="left" gutterBottom>
+                <Typography variant="h4" align='left' gutterBottom>
                     О компании
                 </Typography>
                 <Typography variant="subtitle1" align="left" gutterBottom>
